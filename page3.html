@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>details</title>
+	<link rel="stylesheet" type="text/css" href="page3.css">
+</head>
+<body>
+	first name: <label id="first"></label>
+	<br><br>
+	last name: <label id="last"></label>
+	<br><br>
+	age: <label id="age"></label>
+	<br><br>
+	gender: <label id="gender"></label>
+	<br><br>
+	email: <label id="mail"></label>
+	<br><br>
+	DOB: <label id="bday"></label>
+	<br><br>
+
+	Phno: <label id="phno"></label>
+    <br><br>
+	coach: <label id="coach"></label>
+    <br><br>
+	birth: <label id="birth"></label>
+	<h3>Form Submitted Successfully.</h3>
+	<h4>wait for confirmation.</h4>
+
+
+
+
+
+	<script>
+
+           var parameters=location.search.substring(1).split("&");
+			//substring(1) removes ?.
+			//var l=parameters.length;
+			var temp=parameters[0].split("=");
+			var first=unescape(temp[1]);
+
+			temp=parameters[1].split("=");
+			var last=unescape(temp[1]);
+
+			temp=parameters[2].split("=");
+			var age=unescape(temp[1]);
+
+			temp=parameters[3].split("=");
+			var gender=unescape(temp[1]);
+
+			temp=parameters[4].split("=");
+			var mail=unescape(temp[1]);
+
+			temp=parameters[5].split("=");
+			var bday=unescape(temp[1]);
+
+			/*temp=parameters[6].split("=");
+			temp[1]=temp[1].split("+");
+			temp[1]=temp[1].join(" ");
+			var msg=unescape(temp[1]);
+
+			temp=parameters[7].split("=");
+			var number=unescape(temp[1]);
+
+			var l=parseInt(number);
+			var i;
+			var item;
+			for(i=8;i<=(8+l-1);i++)
+			{
+				temp=parameters[i].split("=");
+				item=unescape(temp[1]);
+				items+=item;
+				if(i!=(8+l-1))
+					items+=", ";
+			}
+			*/
+			temp=parameters[6].split("=");
+			var phno=unescape(temp[1]);
+
+			temp=parameters[7].split("=");
+			var coach=unescape(temp[1]);
+
+			temp=parameters[8].split("=");
+			var birth=unescape(temp[1]);
+
+			document.getElementById("first").innerHTML=first;
+			document.getElementById("last").innerHTML=last;
+			document.getElementById("age").innerHTML=age;
+			document.getElementById("gender").innerHTML=gender;
+			document.getElementById("mail").innerHTML=mail;
+			document.getElementById("bday").innerHTML=bday;
+			/*document.getElementById("msg").innerHTML=msg;
+			document.getElementById("no").innerHTML=number;
+			document.getElementById("items").innerHTML=items;*/
+			document.getElementById("phno").innerHTML=phno;
+			document.getElementById("coach").innerHTML=coach;
+			document.getElementById("birth").innerHTML=birth;
+
+
+	</script>
+
+<!--<h1><u>Your Details</u></h1>
+	First Name:<h2 id="show1">a</h2>
+	<script>
+		var first=document.forms["my_form"]["first"].value;
+		document.getElementById('show1').innerHTML=first;
+	</script>
+	<br>
+	Last Name:<h2 id="show2">b</h2>
+	<script>
+		var last=document.forms["my_form"]["last"].value;
+		document.getElementById('show2').innerHTML=last;
+	</script>
+	<br>
+	gender:<h2 id="show3">c</h2>
+	<script>
+		var gender=document.forms["my_form"]["gender"].value;
+		document.getElementById('show3').innerHTML=gender;
+	</script>
+	<br>
+	age:<h2 id="show4">d</h2>
+	<script>
+		var age=document.forms["my_form"]["age"].value;
+		document.getElementById('show4').innerHTML=age;
+	</script>
+	<br>
+	birthday:<h2 id="show5">d</h2>
+	<script>
+		var bday=document.forms["my_form"]["bday"].value;
+		document.getElementById('show5').innerHTML=bday;
+	</script>
+	<br>
+	email-id:<h2 id="show6">e</h2>
+	<script>
+		var email=document.forms["my_form"]["email"].value;
+		document.getElementById('show6').innerHTML=email;
+	</script>
+	<br>
+	message:<h2 id="show7">f</h2>
+	<script>
+		var msg=document.forms["my_form"]["message"].value;
+		document.getElementById('show7').innerHTML=msg;
+	</script>
+	<br>
+	<h1>.........THANK YOU.......</h1>
+	<!---<script>
+			document.getElementById("show1").innerHTML=first;
+			document.getElementById("show2").innerHTML=last;
+			document.getElementById("show3").innerHTML=gender;
+			document.getElementById("show4").innerHTML=age;
+			document.getElementById("show5").innerHTML=bday;
+			document.getElementById("show6").innerHTML=message;
+	</script>-->
+</body>
+</html>
